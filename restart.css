@@ -30,6 +30,16 @@ body {
     rgb(255, 255, 255) 30%
   );
   display: grid;
+  grid-template-columns: 2fr 5fr;
+  grid-template-rows: 12rem 1fr;
+  grid-template-areas:
+    'header header'
+    'summary-left summary-right'
+    'work-left work-right'
+    'education-left education-right'
+    'skills-left skills-right'
+    'projects-left projects-right';
+  column-gap: 2.5rem;
 }
 
 a:link,
@@ -43,4 +53,48 @@ a:hover,
 a:active {
   text-decoration: underline;
   color: #267eb9;
+}
+
+header {
+  grid-area: header;
+}
+
+.summary-left {
+  grid-area: summary-left;
+}
+.summary-right {
+  grid-area: summary-right;
+}
+
+.work-left {
+  grid-area: work-left;
+}
+.work-right {
+  grid-area: work-right;
+}
+.education-left {
+  grid-area: education-left;
+}
+.education-right {
+  grid-area: education-right;
+}
+.skills-left {
+  grid-area: skills-left;
+}
+.skills-right {
+  grid-area: skills-right;
+}
+.projects-left {
+  grid-area: projects-left;
+}
+.projects-right {
+  grid-area: projects-right;
+}
+
+.summary-right,
+.work-right,
+.education-right,
+.skills-right,
+.projects-right {
+  margin: 0 1rem 3rem 1rem;
 }
