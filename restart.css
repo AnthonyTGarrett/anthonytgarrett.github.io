@@ -26,12 +26,11 @@ body {
   background: linear-gradient(
     90deg,
     rgb(0, 0, 0) 0%,
-    rgb(0, 0, 0) 30%,
-    rgb(255, 255, 255) 30%
+    rgb(0, 0, 0) 25%,
+    rgb(255, 255, 255) 25%
   );
   display: grid;
-  grid-template-columns: 2fr 5fr;
-  grid-template-rows: 12rem 1fr;
+  grid-template-columns: 1fr 3fr;
   grid-template-areas:
     'header header'
     'summary-left summary-right'
@@ -51,12 +50,52 @@ a:visited {
 
 a:hover,
 a:active {
-  text-decoration: underline;
-  color: #267eb9;
+  color: #16547e;
+}
+
+h1 {
+  font-size: 4.5rem;
+  color: #b420e0;
+}
+
+h2 {
+  text-align: right;
+  color: #b420e0;
+  border-top: 1px solid rgba(128, 128, 128, 0.596);
+  padding-top: 2rem;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  text-transform: uppercase;
 }
 
 header {
   grid-area: header;
+  text-align: right;
+  padding: 2rem 2rem;
+}
+
+.contact {
+  font-size: 1.4rem;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+p.date {
+  margin: 0 0 10px 0;
+  font-style: italic;
+  color: #777;
+}
+
+.item {
+  margin-bottom: 2.2rem;
 }
 
 .summary-left {
@@ -96,5 +135,15 @@ header {
 .education-right,
 .skills-right,
 .projects-right {
-  margin: 0 1rem 3rem 1rem;
+  padding: 2rem 0;
+  margin: 0 1rem 2rem 0;
+  border-top: 1px solid rgba(68, 68, 68, 0.596);
+}
+
+.summary-left,
+.work-left,
+.education-left,
+.skills-left,
+.projects-left {
+  margin: 0 1rem;
 }
