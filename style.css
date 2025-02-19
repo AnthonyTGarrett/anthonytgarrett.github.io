@@ -36,6 +36,12 @@ body {
   padding: 0 1rem;
 }
 
+.left-side,
+.right-side {
+  display: flex;
+  flex-direction: column;
+}
+
 section {
   padding-bottom: 5px;
   border-bottom: 1px solid rgba(119, 119, 119, 0.631);
@@ -102,6 +108,7 @@ h4 {
 .title-section {
   margin: 20px 0;
   border-bottom: none;
+  border-top: 1px solid #777;
 }
 
 .section {
