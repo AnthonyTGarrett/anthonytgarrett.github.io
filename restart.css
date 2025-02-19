@@ -20,7 +20,6 @@ body {
 .container {
   max-width: 800px;
   margin: 20px auto;
-  padding: 0;
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
@@ -30,6 +29,7 @@ body {
     rgb(0, 0, 0) 30%,
     rgb(255, 255, 255) 30%
   );
+  display: grid;
 }
 
 a:link,
