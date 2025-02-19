@@ -99,8 +99,17 @@ h4 {
   font-size: 14px;
 }
 
+.title-section {
+  margin: 20px 0;
+  border-bottom: none;
+}
+
 .section {
   margin: 20px 0;
+}
+
+.section p {
+  font-size: 14px;
 }
 .section h2 {
   margin-bottom: 10px;
