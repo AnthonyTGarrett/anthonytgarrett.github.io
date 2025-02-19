@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #e9e8e8;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(
+    90deg,
+    rgb(0, 0, 0) 0%,
+    rgb(0, 0, 0) 30%,
+    rgb(255, 255, 255) 30%
+  );
+}
+
+a:link,
+a:visited {
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  text-decoration: underline;
+}
