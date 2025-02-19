@@ -1,139 +1,101 @@
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.5;
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+body {
+  font-family: 'Libre Baskerville', sans-serif;
   color: #333;
   background-color: #e9e8e8;
-  font-size: 10px;
 }
+
 .container {
   max-width: 800px;
   margin: 20px auto;
-  padding: 0;
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
   background: linear-gradient(
     90deg,
     rgb(0, 0, 0) 0%,
-    rgb(0, 0, 0) 30%,
-    rgb(255, 255, 255) 30%
+    rgb(0, 0, 0) 25%,
+    rgb(255, 255, 255) 25%
   );
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas:
+    'header header'
+    'summary-left summary-right'
+    'work-left work-right'
+    'education-left education-right'
+    'skills-left skills-right'
+    'projects-left projects-right';
+  column-gap: 2.5rem;
 }
 
-.content {
-  display: flex;
+a:link,
+a:visited {
+  color: #3498db;
+  text-decoration: none;
+  transition: 0.3s ease;
 }
 
-.left-side {
-  flex-basis: 30%;
-  text-align: right;
-  padding-right: 10px;
-}
-
-.right-side {
-  flex-basis: 70%;
-  padding: 0 1rem;
-}
-
-.left-side,
-.right-side {
-  display: flex;
-  flex-direction: column;
-}
-
-section {
-  padding-bottom: 5px;
-  border-bottom: 1px solid rgba(119, 119, 119, 0.631);
-}
-
-section:first-of-type {
-  border-top: 1px solid rgba(119, 119, 119, 0.631);
+a:hover,
+a:active {
+  color: #16547e;
 }
 
 h1,
-h2 {
+h2,
+h3,
+h4 {
+  font-family: 'League Spartan', serif;
+}
+
+h1 {
+  font-size: 4.5rem;
   color: #b420e0;
 }
 
-h4 {
-  margin: 0;
-  text-transform: uppercase;
-  font-size: 12px;
-  color: #666;
-}
-
-.header {
+h2 {
   text-align: right;
+  color: #b420e0;
+  border-top: 1px solid rgba(128, 128, 128, 0.596);
+  padding-top: 2rem;
+  text-transform: uppercase;
 }
-.header h1 {
-  margin: 10px 0 0 0;
+
+h3 {
+  font-size: 2rem;
 }
+
+h4 {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+header {
+  grid-area: header;
+  text-align: right;
+  padding: 2rem 2rem;
+}
+
 .contact {
-  margin: 5px 0;
-  font-size: 14px;
-  margin-bottom: 0;
-}
-.contact a:link,
-.contact a:visited {
-  color: #003a77;
-  text-decoration: none;
+  font-size: 1.4rem;
 }
 
-.contact a:hover,
-.contact a:active {
-  color: #0054ad;
-  text-decoration: none;
-}
-
-.linked {
-  margin: 0;
-  font-size: 14px;
-}
-
-.linked a:link,
-.linked a:visited {
-  color: #003a77;
-  text-decoration: none;
-}
-
-.linked a:hover,
-.linked a:active {
-  color: #0054ad;
-  text-decoration: none;
-  margin: 0;
-  font-size: 14px;
-}
-
-.title-section {
-  margin: 20px 0;
-  border-bottom: none;
-  border-top: 1px solid #777;
-}
-
-.section {
-  margin: 20px 0;
-}
-
-.section p {
-  font-size: 14px;
-}
-.section h2 {
-  margin-bottom: 10px;
-  border-bottom: 1px solid #777;
-  padding-bottom: 5px;
-}
-.item {
-  margin-bottom: 15px;
-}
-.item h3 {
-  margin: 0;
-  font-size: 18px;
-  color: #555;
-}
-.item p {
-  margin: 5px 0;
-  font-size: 14px;
+p {
+  font-size: 1.4rem;
 }
 
 p.date {
@@ -141,15 +103,75 @@ p.date {
   font-style: italic;
   color: #777;
 }
+.work-right .item:last-of-type,
+.education-right .item:last-of-type {
+  margin-bottom: 0;
+}
+
+.item {
+  margin-bottom: 1.6rem;
+}
+
+.summary-left {
+  grid-area: summary-left;
+}
+.summary-right {
+  grid-area: summary-right;
+}
+
+.work-left {
+  grid-area: work-left;
+}
+.work-right {
+  grid-area: work-right;
+}
+.education-left {
+  grid-area: education-left;
+}
+.education-right {
+  grid-area: education-right;
+}
+.skills-left {
+  grid-area: skills-left;
+}
+.skills-right {
+  grid-area: skills-right;
+}
+.projects-left {
+  grid-area: projects-left;
+}
+.projects-right {
+  grid-area: projects-right;
+}
+
+.summary-right,
+.work-right,
+.education-right,
+.skills-right,
+.projects-right {
+  padding: 2rem 0;
+  margin: 0 1rem 0 0;
+  border-top: 1px solid rgba(68, 68, 68, 0.596);
+}
+
+.summary-left,
+.work-left,
+.education-left,
+.skills-left,
+.projects-left {
+  margin: 0 1rem;
+}
+
 .skills ul {
   list-style: none;
   padding: 0;
 }
 .skills ul li {
   display: inline-block;
-  background: #003a77;
+  background: #b420e0;
   color: #fff;
   padding: 8px 12px;
   margin: 5px 5px 5px 0;
   border-radius: 4px;
+  font-size: 1.4rem;
 }
