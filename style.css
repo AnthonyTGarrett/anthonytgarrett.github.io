@@ -159,7 +159,7 @@ p.date {
 .education-left,
 .skills-left,
 .projects-left {
-  margin: 0 1rem;
+  margin-right: 1rem;
 }
 
 .skills ul {
