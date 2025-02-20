@@ -63,7 +63,7 @@ h4 {
 }
 
 h1 {
-  font-size: 4.5rem;
+  font-size: 7.5vw;
   color: #b420e0;
 }
 
@@ -90,8 +90,8 @@ header {
   padding: 2rem 2rem;
 }
 
-.contact {
-  font-size: 1.4rem;
+.contact-item {
+  font-size: 2.2vw;
 }
 
 p {
