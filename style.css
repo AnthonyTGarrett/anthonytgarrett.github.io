@@ -185,3 +185,23 @@ p.date {
     font-size: 1.1rem;
   }
 }
+
+/* ********************
+    Projects Page
+ **********************/
+.project-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.project-header {
+  text-align: center;
+}
+
+.project-card {
+  flex: 1;
+}
