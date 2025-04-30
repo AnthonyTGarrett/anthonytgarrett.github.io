@@ -1,0 +1,95 @@
+@import url(./reset.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  --primary-color: #5b7c99;
+  --secondary-color: #fccb06;
+  --dark-gray: #4c4e52;
+}
+
+body {
+  font-family: 'Merriweather Sans';
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+hr.breaker {
+  width: 6rem;
+  background-color: #fccb06;
+  margin: 1.5rem auto;
+  height: 0.8rem;
+  opacity: 1;
+  border: none;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+header {
+  height: 100vh;
+  background: linear-gradient(
+      to bottom,
+      rgba(91, 124, 153, 0.8) 0%,
+      rgba(91, 124, 153, 0.8) 100%
+    ),
+    url('../img/program.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 600px;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    max-width: 800px;
+  }
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1200px;
+  }
+}
