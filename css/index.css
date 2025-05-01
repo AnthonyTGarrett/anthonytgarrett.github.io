@@ -4,7 +4,7 @@
 
 :root {
   --primary-color: #1ecbe1;
-  --dark-gray: #41413f;
+  --dark-gray: rgb(65, 65, 63);
 }
 
 body {
@@ -18,7 +18,7 @@ body {
 
 hr.breaker {
   width: 6rem;
-  background-color: #fccb06;
+  background-color: #1ecbe1;
   margin: 1.5rem auto;
   height: 0.8rem;
   opacity: 1;
@@ -43,8 +43,8 @@ header {
   height: 100vh;
   background: linear-gradient(
       to bottom,
-      rgba(91, 124, 153, 0.8) 0%,
-      rgba(91, 124, 153, 0.8) 100%
+      rgba(65, 65, 63, 0.8) 0%,
+      rgba(65, 65, 63, 0.8) 100%
     ),
     url('../img/program.png');
   background-repeat: no-repeat;
