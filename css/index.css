@@ -2,9 +2,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+/* * {
+  border: 1px solid red;
+} */
+
 :root {
   --primary-color: #1ecbe1;
   --dark-gray: rgb(65, 65, 63);
+  --light-gray: #d3d3d3;
 }
 
 body {
@@ -16,13 +21,83 @@ body {
   margin: 0 auto;
 }
 
+section {
+  padding: 8rem 0;
+}
+
 hr.breaker {
   width: 6rem;
-  background-color: #1ecbe1;
   margin: 1.5rem auto;
-  height: 0.8rem;
+  height: 0.2rem;
   opacity: 1;
   border: none;
+}
+
+hr.breaker-primary {
+  background-color: var(--primary-color);
+}
+
+hr.breaker-white {
+  background-color: var(--light-gray);
+}
+
+.hamburger {
+  display: block;
+}
+
+/* Hamburger Menu styles */
+
+.hamburger .line {
+  width: 40px;
+  height: 5px;
+  background-color: var(--dark-gray);
+  display: block;
+  margin: 8px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger:hover {
+  cursor: pointer;
+}
+
+#hamburger-6.is-active {
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition-delay: 0.6s;
+  -o-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#hamburger-6.is-active .line:nth-child(2) {
+  width: 0px;
+}
+
+#hamburger-6.is-active .line:nth-child(1),
+#hamburger-6.is-active .line:nth-child(3) {
+  -webkit-transition-delay: 0.3s;
+  -o-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
+#hamburger-6.is-active .line:nth-child(1) {
+  -webkit-transform: translateY(13px);
+  -ms-transform: translateY(13px);
+  -o-transform: translateY(13px);
+  transform: translateY(13px);
+}
+
+#hamburger-6.is-active .line:nth-child(3) {
+  -webkit-transform: translateY(-13px) rotate(90deg);
+  -ms-transform: translateY(-13px) rotate(90deg);
+  -o-transform: translateY(-13px) rotate(90deg);
+  transform: translateY(-13px) rotate(90deg);
 }
 
 .nav-container {
@@ -32,19 +107,37 @@ hr.breaker {
 }
 
 nav {
-  background-color: transparent;
+  background-color: #fff;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
 }
 
+.main-nav {
+  padding: 1rem 2.4rem;
+}
+
+.nav-name {
+  font-size: 2rem;
+  color: var(--dark-gray);
+}
+
+.nav-links {
+  color: var(--light-gray);
+  font-size: 1.8rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  display: none;
+}
+
 header {
-  height: 100vh;
+  height: 70vh;
   background: linear-gradient(
       to bottom,
-      rgba(65, 65, 63, 0.8) 0%,
-      rgba(65, 65, 63, 0.8) 100%
+      rgba(65, 65, 63, 0.9) 0%,
+      rgba(65, 65, 63, 0.9) 100%
     ),
     url('../img/program.png');
   background-repeat: no-repeat;
@@ -59,6 +152,64 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: var(--light-gray);
+}
+
+.header-container h1 {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.header-container p {
+  font-size: 2.3rem;
+}
+
+.header-container .btn {
+  margin-top: 6rem;
+}
+
+.btn {
+  padding: 1.5rem 3rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  color: var(--light-gray);
+  font-size: 1.8rem;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+}
+
+.btn-white {
+  background-color: var(--light-gray);
+  color: var(--dark-gray);
+}
+
+/* Section About */
+section#about {
+  background-color: var(--primary-color);
+  color: var(--light-gray);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+.about-container h2 {
+  font-size: 3rem;
+}
+
+.about-container p {
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
 }
 
 /* // Small devices (landscape phones, 576px and up) */
@@ -69,6 +220,17 @@ header {
 @media (min-width: 768px) {
   .container {
     max-width: 600px;
+  }
+
+  .nav-links {
+    display: block;
+  }
+  .hamburger {
+    display: none;
+  }
+
+  .main-nav {
+    background-color: transparent;
   }
 }
 
