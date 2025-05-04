@@ -11,11 +11,12 @@
     <nav class="main-nav">
       <div class="container nav-container">
         <a href="index.html" class="nav-name">Anthony Garrett</a>
-        <div class="hamburger" id="hamburger-6">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-        </div>
+        <input
+          type="checkbox"
+          role="button"
+          aria-label="Display the menu"
+          class="menu"
+        />
         <ul class="nav-links">
           <li>
             <a href="#about">About</a>
@@ -86,17 +87,17 @@
         </div>
       </div>
     </section>
-    <section id="portfolio">
-      <div class="project"></div>
-      <div class="project"></div>
-      <div class="project"></div>
-      <div class="project"></div>
-      <div class="project"></div>
-      <div class="project"></div>
-    </section>
+
     <section id="resume">
       <h2>View or Download my Resume Now!</h2>
-      <a href="resume.html" class="btn btn-white">Go Now</a>
+      <div class="resume-choices">
+        <a href="resume.html" class="btn btn-white">View</a>
+        <a
+          class="btn btn-white"
+          href="https://drive.google.com/uc?export=download&amp;id=1K3TYdhjHf19Amgy63C5AcYylMrjh7ObE"
+          >Download Now!</a
+        >
+      </div>
     </section>
     <section class="contact">
       <div class="container">

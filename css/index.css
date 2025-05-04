@@ -51,63 +51,63 @@ hr.breaker-white {
   background-color: var(--light-gray);
 }
 
-.hamburger {
-  display: block;
-}
-
 /* Hamburger Menu styles */
+.menu {
+  --s: 35px; /* control the size */
+  --c: var(--primary-color); /* the color */
 
-.hamburger .line {
-  width: 40px;
-  height: 5px;
-  background-color: var(--dark-gray);
-  display: block;
-  margin: 8px auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.hamburger:hover {
+  height: var(--s);
+  aspect-ratio: 1;
+  border: none;
+  padding: 0;
+  border-inline: calc(var(--s) / 2) solid #0000;
+  box-sizing: content-box;
+  --_g1: linear-gradient(var(--c) 20%, #0000 0 80%, var(--c) 0) no-repeat
+    content-box border-box;
+  --_g2: radial-gradient(circle closest-side at 50% 12.5%, var(--c) 95%, #0000)
+    repeat-y content-box border-box;
+  background: var(--_g2) left var(--_p, 0px) top,
+    var(--_g1) left calc(var(--s) / 10 + var(--_p, 0px)) top,
+    var(--_g2) right var(--_p, 0px) top,
+    var(--_g1) right calc(var(--s) / 10 + var(--_p, 0px)) top;
+  background-size: 20% 80%, 40% 100%;
+  position: relative;
+  clip-path: inset(0 25%);
+  -webkit-mask: linear-gradient(90deg, #0000, #000 25% 75%, #0000);
   cursor: pointer;
+  transition: background-position 0.3s var(--_s, 0.3s),
+    clip-path 0s var(--_s, 0.6s);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.menu:before,
+.menu:after {
+  content: '';
+  position: absolute;
+  border-radius: var(--s);
+  inset: 40% 0;
+  background: var(--c);
+  transition: transform 0.3s calc(0.3s - var(--_s, 0.3s));
 }
 
-#hamburger-6.is-active {
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  -webkit-transition-delay: 0.6s;
-  -o-transition-delay: 0.6s;
-  transition-delay: 0.6s;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
+.menu:checked {
+  clip-path: inset(0);
+  --_p: calc(-1 * var(--s));
+  --_s: 0s;
+}
+.menu:checked:before {
   transform: rotate(45deg);
 }
-
-#hamburger-6.is-active .line:nth-child(2) {
-  width: 0px;
+.menu:checked:after {
+  transform: rotate(-45deg);
 }
-
-#hamburger-6.is-active .line:nth-child(1),
-#hamburger-6.is-active .line:nth-child(3) {
-  -webkit-transition-delay: 0.3s;
-  -o-transition-delay: 0.3s;
-  transition-delay: 0.3s;
-}
-
-#hamburger-6.is-active .line:nth-child(1) {
-  -webkit-transform: translateY(13px);
-  -ms-transform: translateY(13px);
-  -o-transform: translateY(13px);
-  transform: translateY(13px);
-}
-
-#hamburger-6.is-active .line:nth-child(3) {
-  -webkit-transform: translateY(-13px) rotate(90deg);
-  -ms-transform: translateY(-13px) rotate(90deg);
-  -o-transform: translateY(-13px) rotate(90deg);
-  transform: translateY(-13px) rotate(90deg);
+.menu:focus-visible {
+  clip-path: none;
+  -webkit-mask: none;
+  border: none;
+  outline: 2px solid var(--c);
+  outline-offset: 5px;
 }
 
 .nav-container {
@@ -224,7 +224,7 @@ section#about {
 /* Section Services */
 
 section#services {
-  height: 60vh;
+  height: 100%;
 }
 
 .services-container {
@@ -258,6 +258,16 @@ ion-icon {
   font-size: 6rem;
 }
 
+/* Section Resume */
+section#resume {
+  background-color: var(--dark-gray);
+  color: var(--light-gray);
+}
+
+section#resume h2 {
+  font-size: 2.1rem;
+}
+
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
 }
@@ -271,7 +281,7 @@ ion-icon {
   .nav-links {
     display: block;
   }
-  .hamburger {
+  .menu {
     display: none;
   }
 
