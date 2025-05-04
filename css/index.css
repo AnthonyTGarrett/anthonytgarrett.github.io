@@ -31,7 +31,7 @@ h2 {
 }
 
 h3 {
-  font-size: 2.2rem;
+  font-size: 3rem;
   text-align: center;
 }
 
@@ -177,6 +177,7 @@ header {
 
 .header-container .btn {
   margin-top: 6rem;
+  color: var(--dark-gray);
 }
 
 .btn {
@@ -212,12 +213,49 @@ section#about {
   justify-content: center;
   align-items: center;
   gap: 2.8rem;
-  padding: 0 1rem;
+  padding: 0 1.8rem;
 }
 
 .about-container p {
   font-size: 1.5rem;
   margin-bottom: 4rem;
+}
+
+/* Section Services */
+
+section#services {
+  height: 60vh;
+}
+
+.services-container {
+  margin: 0 auto;
+  padding: 0 1.8rem;
+}
+
+.service-items {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  height: 100%;
+  margin: 3rem 0;
+}
+
+.service {
+  text-align: center;
+}
+
+.service h4 {
+  font-size: 2.1rem;
+}
+
+.service p {
+  color: #888;
+  font-size: 1.6rem;
+}
+
+ion-icon {
+  color: var(--primary-color);
+  font-size: 6rem;
 }
 
 /* // Small devices (landscape phones, 576px and up) */
