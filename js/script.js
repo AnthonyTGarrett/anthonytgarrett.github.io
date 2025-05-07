@@ -6,11 +6,17 @@ document.addEventListener('DOMContentLoaded', event => {
   const navContain = document.querySelector('.nav-container');
   const mobileNav = document.querySelector('.mobile-nav');
 
-  const mobileLinks = document.querySelectorAll('.mobile-link');
+  const mobileLinks = document.querySelector('.mobile-links');
 
   menu.addEventListener('click', e => {
     mainNav.classList.toggle('extend');
     navContain.classList.toggle('go-top');
-    mobileNav.classList.toggle('hide');
+    mobileNav.classList.toggle('open');
+  });
+
+  mobileLinks.addEventListener('click', event => {
+    mainNav.classList.toggle('extend');
+    mobileNav.classList.toggle('open');
+    console.log(event.originalTarget.click());
   });
 });
