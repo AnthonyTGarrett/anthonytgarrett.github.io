@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', event => {
   mobileLinks.addEventListener('click', event => {
     mainNav.classList.toggle('extend');
     mobileNav.classList.toggle('open');
-    console.log(event.originalTarget.click());
+
+    window.Location.href = event.target.href;
   });
 });

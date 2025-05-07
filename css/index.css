@@ -220,7 +220,7 @@ header {
 }
 
 .header-container h1 {
-  font-size: 4rem;
+  font-size: 6rem;
   text-align: center;
 }
 
@@ -350,6 +350,16 @@ section#resume h2 {
   .main-nav {
     background-color: transparent;
     box-shadow: none;
+    padding-top: 3rem;
+    height: 75px;
+  }
+
+  .nav-name {
+    color: var(--light-gray);
+  }
+
+  .nav-links {
+    display: flex;
   }
 }
 
