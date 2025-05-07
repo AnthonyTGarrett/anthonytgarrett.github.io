@@ -1,7 +1,16 @@
 'use strict';
 
-const hamburgerMenu = document.getElementById('nav-icon3');
+document.addEventListener('DOMContentLoaded', event => {
+  const menu = document.querySelector('.menu');
+  const mainNav = document.querySelector('.main-nav');
+  const navContain = document.querySelector('.nav-container');
+  const mobileNav = document.querySelector('.mobile-nav');
 
-hamburgerMenu.addEventListener('click', e => {
-  e.target.classList.toggle('open');
+  const mobileLinks = document.querySelectorAll('.mobile-link');
+
+  menu.addEventListener('click', e => {
+    mainNav.classList.toggle('extend');
+    navContain.classList.toggle('go-top');
+    mobileNav.classList.toggle('hide');
+  });
 });
