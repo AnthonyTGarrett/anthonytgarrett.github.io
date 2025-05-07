@@ -173,6 +173,10 @@ nav {
   display: none;
 }
 
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
 .mobile-nav {
   display: none;
   flex-direction: column;
@@ -284,8 +288,8 @@ section#services {
 }
 
 .service-items {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 6rem;
   height: 100%;
   margin: 3rem 0;
@@ -361,6 +365,11 @@ section#resume h2 {
   .nav-links {
     display: flex;
   }
+
+  .service-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* // Large devices (desktops, 992px and up) */
@@ -378,6 +387,11 @@ section#resume h2 {
 
   header {
     height: 100vh;
+  }
+
+  .service-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
