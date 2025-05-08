@@ -338,6 +338,57 @@ section#resume h2 {
   text-align: center;
 }
 
+/* Section Contact */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-container p {
+  font-size: 1.7rem;
+  color: #888;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+#email,
+#phone,
+#name,
+#message {
+  padding: 1.5rem 1.8rem;
+  outline: 1px solid rgba(0, 0, 0, 0.301);
+  border-radius: 20px;
+}
+
+#email:focus,
+#phone:focus,
+#name:focus,
+#message:focus {
+  outline: 2px solid var(--primary-color);
+}
+
+::placeholder {
+  color: var(--dark-gray);
+  font-size: 1.2rem;
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+
+footer {
+  background-color: var(--light-gray);
+  color: var(--dark-gray);
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
 }
@@ -379,6 +430,10 @@ section#resume h2 {
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .container {
+    max-width: 800px;
+  }
+
+  .container.contact-container {
     max-width: 800px;
   }
 }
