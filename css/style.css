@@ -32,7 +32,7 @@ img {
   display: block;
 }
 
-.container {
+/* .container-resume {
   max-width: 800px;
   margin: 20px auto;
   background: #fff;
@@ -54,7 +54,7 @@ img {
     'skills-left skills-right'
     'projects-left projects-right';
   column-gap: 2.5rem;
-}
+} */
 
 a:link,
 a:visited {
@@ -80,13 +80,13 @@ h1 {
   color: var(--primary-color);
 }
 
-h2 {
+/* .resume-left-h2 {
   text-align: right;
   color: var(--primary-color);
   border-top: 1px solid rgba(128, 128, 128, 0.596);
   padding-top: 2rem;
   text-transform: uppercase;
-}
+} */
 
 h3 {
   font-size: 2rem;
@@ -97,15 +97,15 @@ h4 {
   font-size: 1.2rem;
 }
 
-header {
+/* .header-resume {
   grid-area: header;
   text-align: right;
   padding: 2rem 2rem;
-}
+} */
 
-.contact-item {
+/* .contact-item {
   font-size: 1.4rem;
-}
+} */
 
 p {
   font-size: 1.4rem;
@@ -116,7 +116,7 @@ p.date {
   font-style: italic;
   color: #777;
 }
-.work-right .item:last-of-type,
+/* .work-right .item:last-of-type,
 .education-right .item:last-of-type {
   margin-bottom: 0;
 }
@@ -187,7 +187,7 @@ p.date {
   margin: 5px 5px 5px 0;
   border-radius: 4px;
   font-size: 1.4rem;
-}
+} */
 
 @media (max-width: 768px) {
   h1 {
