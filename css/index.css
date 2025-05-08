@@ -8,7 +8,7 @@
 
 :root {
   --primary-color: #1ecbe1;
-  --dark-gray: rgb(65, 65, 63);
+  --dark-gray: #41413f;
   --light-gray: #d3d3d3;
 }
 
@@ -49,6 +49,10 @@ hr.breaker-primary {
 
 hr.breaker-white {
   background-color: var(--light-gray);
+}
+
+.scroll-down {
+  color: #41413f;
 }
 
 /* Hamburger Menu styles */
@@ -224,7 +228,7 @@ header {
 }
 
 .header-container h1 {
-  font-size: 6rem;
+  font-size: 4rem;
   text-align: center;
 }
 
@@ -392,6 +396,11 @@ section#resume h2 {
   .service-items {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .header-container h1 {
+    font-size: 6rem;
+    text-align: center;
   }
 }
 
