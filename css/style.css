@@ -16,12 +16,12 @@
   --dark-gray: #4c4e52;
 }
 
-html {
+/* html {
   font-size: 10px;
   line-height: 1.4;
 }
 
-body {
+.resume-body {
   font-family: 'Libre Baskerville', sans-serif;
   color: var(--dark-gray);
   background-color: #e9e8e8;
@@ -30,7 +30,7 @@ body {
 img {
   max-width: 100%;
   display: block;
-}
+} */
 
 /* .container-resume {
   max-width: 800px;
@@ -56,29 +56,29 @@ img {
   column-gap: 2.5rem;
 } */
 
-a:link,
-a:visited {
+/* a.resume-a:link,
+a.resume-a:visited {
   color: #3498db;
   text-decoration: none;
   transition: 0.3s ease;
 }
 
-a:hover,
-a:active {
+a.resume-a:hover,
+a.resume-a:active {
   color: #16547e;
-}
+} */
 
-h1,
+/* h1,
 h2,
 h3,
 h4 {
   font-family: 'League Spartan', serif;
-}
+} */
 
-h1 {
+/* h1.resume-h1 {
   font-size: 4.5rem;
   color: var(--primary-color);
-}
+} */
 
 /* .resume-left-h2 {
   text-align: right;
@@ -88,14 +88,14 @@ h1 {
   text-transform: uppercase;
 } */
 
-h3 {
+/* h3.resume-h3 {
   font-size: 2rem;
 }
 
-h4 {
+h4.resume-h4 {
   text-transform: uppercase;
   font-size: 1.2rem;
-}
+} */
 
 /* .header-resume {
   grid-area: header;
@@ -107,7 +107,7 @@ h4 {
   font-size: 1.4rem;
 } */
 
-p {
+/* p.resume-p {
   font-size: 1.4rem;
 }
 
@@ -115,7 +115,7 @@ p.date {
   margin: 0 0 10px 0;
   font-style: italic;
   color: #777;
-}
+} */
 /* .work-right .item:last-of-type,
 .education-right .item:last-of-type {
   margin-bottom: 0;
@@ -190,7 +190,7 @@ p.date {
 } */
 
 @media (max-width: 768px) {
-  h1 {
+  .resume-h1 {
     font-size: 2.5rem;
   }
 
