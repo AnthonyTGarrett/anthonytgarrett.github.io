@@ -327,14 +327,13 @@ ion-icon {
 .project {
   position: relative;
   text-align: center;
-  z-index: -3;
 }
 
 .project h4 {
   color: #888;
 }
 
-div.overlay {
+.overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -347,12 +346,28 @@ div.overlay {
   align-items: center;
   color: var(--dark-gray);
   font-size: 1.7rem;
-  z-index: 999;
+  transition: all 0.3s ease;
+  opacity: 0;
 }
 
-div.overlay:hover {
-  color: red;
-  display: flex;
+.overlay:hover {
+  color: var(--dark-gray);
+  opacity: 1;
+}
+
+.five-clock {
+  background-image: url(../img/cocktail.jpg);
+  background-size: cover;
+}
+
+.calculator {
+  background-image: url(../img/calculator.jpg);
+  background-size: cover;
+}
+
+.brew {
+  background-image: url(../img/bigBrewNation.jpg);
+  background-size: cover;
 }
 
 /* Section Resume */
