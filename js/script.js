@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', event => {
 //   const headerLinks = document.querySelectorAll('.link');
 
 //   if (this.scrollY > 80 && window.innerWidth > 768) {
-//     headerElement.style.position = 'Fixed';
 //     headerElement.style.backgroundColor = 'rgba(255,255,255,0.9)';
 //     headerElement.style.paddingTop = '1rem';
 //     headerElement.style.height = '50px';
