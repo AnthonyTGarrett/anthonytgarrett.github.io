@@ -4,6 +4,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
+/* * {
+  border: 1px solid red;
+} */
+
 :root {
   --primary-color: #1ecbe1;
   --dark-gray: #41413f;
@@ -316,12 +320,18 @@ ion-icon {
   z-index: -99999;
 }
 /* Section Projects */
-#projects {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows:
-    minmax(250px, max-content)
-    repeat(auto-fill, 200px) 20%;
+div#projects {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.project {
+  height: 300px;
+}
+.overlay {
+  opacity: 0;
 }
 
 .project {
@@ -329,8 +339,12 @@ ion-icon {
   text-align: center;
 }
 
+.project a {
+  color: #d3d3d3;
+}
+
 .project h4 {
-  color: #888;
+  color: var(--primary-color);
 }
 
 .overlay {
@@ -339,7 +353,7 @@ ion-icon {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(30, 202, 225, 0.781);
+  background-color: rgba(0, 93, 105, 0.781);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -347,7 +361,7 @@ ion-icon {
   color: var(--dark-gray);
   font-size: 1.7rem;
   transition: all 0.3s ease;
-  opacity: 0;
+  opacity: 1;
 }
 
 .overlay:hover {
@@ -358,16 +372,43 @@ ion-icon {
 .five-clock {
   background-image: url(../img/cocktail.jpg);
   background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .calculator {
   background-image: url(../img/calculator.jpg);
   background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .brew {
   background-image: url(../img/bigBrewNation.jpg);
   background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.todo {
+  background-image: url(../img/todo.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.inventory {
+  background-image: url(../img/easyInventory.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.popularstreaming {
+  background-image: url(../img/movie.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 /* Section Resume */
@@ -448,7 +489,7 @@ footer {
 ****** Resume site styles ****
 *************************** */
 
-section.section-resume {
+/* section.section-resume {
   padding-top: 0;
 }
 
@@ -629,7 +670,7 @@ p.date {
   margin: 5px 5px 5px 0;
   border-radius: 4px;
   font-size: 1.4rem;
-}
+} */
 
 /* ********************
     Projects Page
