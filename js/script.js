@@ -1,5 +1,14 @@
 'use strict';
 
+const repositories = [
+  'BigBrewNation',
+  'calculator',
+  'EasyConsolidation',
+  'Five-O-Clock-Somewhere',
+  'todoList',
+  'popular_streaming',
+];
+
 document.addEventListener('DOMContentLoaded', event => {
   const menu = document.querySelector('.menu');
   const mainNav = document.querySelector('.main-nav');
@@ -17,24 +26,70 @@ document.addEventListener('DOMContentLoaded', event => {
   mobileLinks.addEventListener('click', event => {
     mainNav.classList.toggle('extend');
     mobileNav.classList.toggle('open');
+    navContain.classList.toggle('go-top');
 
     window.Location.href = event.target.href;
   });
+
+  const repos = getUserRepos('AnthonyTGarrett');
+  addInformation(repos);
 });
 
-// function changeCss() {
-//   let headerElement = document.querySelector('.main-nav');
-//   const headerLinks = document.querySelectorAll('.link');
+function changeCss() {
+  let headerElement = document.querySelector('.main-nav');
+  const headerLinks = document.querySelectorAll('.link');
 
-//   if (this.scrollY > 80 && window.innerWidth > 768) {
-//     headerElement.style.backgroundColor = 'rgba(255,255,255,0.9)';
-//     headerElement.style.paddingTop = '1rem';
-//     headerElement.style.height = '50px';
-//   } else if (this.scrollY < 80 && window.innerWidth > 768) {
-//     headerElement.style.backgroundColor = 'transparent';
-//     headerElement.style.paddingTop = '3rem';
-//     headerElement.style.height = '55px';
-//   }
-// }
+  if (this.scrollY > 80 && window.innerWidth > 768) {
+    headerElement.style.backgroundColor = 'rgba(255,255,255,0.9)';
+    headerElement.style.paddingTop = '1rem';
+    headerElement.style.height = '50px';
+    for (let i = 0; i < headerLinks.length; i++) {
+      headerLinks[i].style.color = '#41413f';
+    }
+  } else if (this.scrollY < 80 && window.innerWidth > 768) {
+    headerElement.style.backgroundColor = 'transparent';
+    headerElement.style.paddingTop = '3rem';
+    headerElement.style.height = '55px';
+    for (let i = 0; i < headerLinks.length; i++) {
+      headerLinks[i].style.color = '#d3d3d3';
+    }
+  }
+}
 
-// window.addEventListener('scroll', changeCss, false);
+window.addEventListener('scroll', changeCss, false);
+
+async function getUserRepos(ghUserName) {
+  try {
+    const res = await fetch(`https://api.github.com/users/${ghUserName}/repos`);
+    const data = await res.json();
+    return data;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+function addInformation(repos) {
+  repos.then(data => {
+    const usefulInfo = data.filter(obj => {
+      return repositories.includes(obj.name);
+    });
+    const siteList = [
+      'githubBrew',
+      'githubCalculator',
+      'githubInventory',
+      'githubClock',
+      'githubStreaming',
+      'githubTodo',
+    ];
+
+    for (let i = 0; i < siteList.length; i++) {
+      document.getElementById(siteList[i]).href = usefulInfo[i].html_url;
+
+      const dateString = usefulInfo[i].pushed_at;
+      const date = new Date(dateString);
+      document.querySelector(
+        `.${siteList[i]}`
+      ).textContent = `Updated: ${date.toLocaleString()}`;
+    }
+  });
+}

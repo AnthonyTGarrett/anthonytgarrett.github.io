@@ -141,6 +141,7 @@ nav {
   align-items: center;
   z-index: 9999;
   position: fixed;
+  background-color: #fff;
 }
 
 .extend {
@@ -159,11 +160,10 @@ nav {
 }
 
 .mobile-nav.open {
-  /* display: block;
-  transition: all 0.4s ease; */
   display: block;
   max-height: 1000px;
   opacity: 1;
+  background-color: #fff;
 
   @starting-style {
     max-height: 0;
@@ -181,7 +181,7 @@ nav {
 }
 
 .nav-links a:hover {
-  color: var(--primary-color);
+  color: var(--primary-color) !important;
 }
 
 .mobile-nav {
@@ -254,11 +254,24 @@ nav {
 
 .btn-primary {
   background-color: var(--primary-color);
+  color: var(--dark-gray);
+  transition: all 0.3s ease-in;
+}
+
+.btn-primary:hover {
+  background-color: #1aabbe;
+  color: #444;
 }
 
 .btn-white {
   background-color: var(--light-gray);
   color: var(--dark-gray);
+  transition: all 0.3s ease-in;
+}
+
+.btn-white:hover {
+  background-color: #b4b4b4;
+  color: #555;
 }
 
 /* Section About */
@@ -372,6 +385,12 @@ div#projects {
 .overlay:hover {
   color: var(--dark-gray);
   opacity: 1;
+}
+
+.overlay p {
+  color: var(--light-gray);
+  margin-top: 1rem;
+  font-size: 1.2rem;
 }
 
 .five-clock {
@@ -490,403 +509,16 @@ footer {
   padding: 3rem 0;
 }
 
-/* ***************************
-****** Resume site styles ****
-*************************** */
-
-/* section.section-resume {
-  padding-top: 0;
-}
-
-.resume-body {
-  font-family: 'Libre Baskerville', sans-serif;
-  color: var(--dark-gray);
-  background-color: #e9e8e8;
-}
-
-a.resume-a:link,
-a.resume-a:visited {
-  color: #3498db;
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-
-a.resume-a:hover,
-a.resume-a:active {
-  color: #16547e;
-}
-
-h1.resume-h1,
-h2.resume-h2,
-h3.resume-h3,
-h4.resume-h4,
-h5 {
-  font-family: 'League Spartan', serif;
-}
-
-h1.resume-h1 {
-  font-size: 4.5rem;
-  color: var(--primary-color);
-}
-
-h2.project.resume-left-h2 {
-  color: yellow;
-}
-
-h3.resume-h3 {
-  font-size: 2rem;
-}
-
-h4.resume-h4 {
-  text-transform: uppercase;
-  font-size: 1.2rem;
-}
-
-p.resume-p {
-  font-size: 1.4rem;
-}
-
-p.date {
-  margin: 0 0 10px 0;
-  font-style: italic;
-  color: #777;
-}
-.contact-item {
-  font-size: 1.4rem;
-}
-
-.resume-left-h2 {
-  text-align: right;
-  color: var(--primary-color);
-  border-top: 1px solid rgba(128, 128, 128, 0.596);
-  padding-top: 2rem;
-  text-transform: uppercase;
-  font-size: 2.1rem;
-}
-.header-resume {
-  grid-area: header;
-  text-align: right;
-  padding: 2rem 2rem;
-}
-
-.container-resume {
-  max-width: 800px;
-  margin: 20px auto;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(
-    90deg,
-    #3c3d3f 0%,
-    #3c3d3f 25%,
-    rgb(255, 255, 255) 25%
-  );
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-areas:
-    'header header'
-    'summary-left summary-right'
-    'work-left work-right'
-    'education-left education-right'
-    'skills-left skills-right'
-    'projects-left projects-right';
-  column-gap: 2.5rem;
-}
-
-.work-right .item:last-of-type,
-.education-right .item:last-of-type {
-  margin-bottom: 0;
-}
-
-.item:first-of-type {
-  margin-top: 1.5rem;
-}
-
-.item {
-  margin-bottom: 1.6rem;
-}
-
-.summary-left {
-  grid-area: summary-left;
-}
-.summary-right {
-  grid-area: summary-right;
-}
-
-.work-left {
-  grid-area: work-left;
-}
-.work-right {
-  grid-area: work-right;
-}
-.education-left {
-  grid-area: education-left;
-}
-.education-right {
-  grid-area: education-right;
-}
-.skills-left {
-  grid-area: skills-left;
-}
-.skills-right {
-  grid-area: skills-right;
-}
-.projects-left {
-  grid-area: projects-left;
-}
-.projects-right {
-  grid-area: projects-right;
-}
-
-.summary-right,
-.skills-right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.summary-right,
-.work-right,
-.education-right,
-.skills-right,
-.projects-right {
-  padding: 2rem 0;
-  margin: 0 1rem 0 0;
-  border-top: 1px solid rgba(68, 68, 68, 0.596);
-}
-
-.summary-left,
-.work-left,
-.education-left,
-.skills-left,
-.projects-left {
-  margin-right: 1rem;
-}
-
-.skills ul {
-  list-style: none;
-  padding: 0;
-}
-.skills ul li {
-  display: inline-block;
-  background: var(--primary-color);
-  color: #fff;
-  padding: 8px 12px;
-  margin: 5px 5px 5px 0;
-  border-radius: 4px;
-  font-size: 1.4rem;
-} */
-
-/* ********************
-    Projects Page
- **********************/
-.project-container {
-  max-width: 1100px;
-  margin: 5rem auto;
-  display: grid;
-  gap: 5rem;
-  grid-template-columns: 1fr 1fr;
-}
-
-main {
-  background-color: #ececec;
-  padding: 2rem 0;
-}
-
-.project-container {
-  color: #000;
-  margin-bottom: 0;
-}
-
-ion-icon.back-arrow {
-  font-size: 2.8rem;
-}
-
-.project-container h3 {
-  color: var(--primary-color);
-}
-
-.project-header h1 {
-  font-size: 4.5rem;
-}
-
-.project-header h4 {
-  font-size: 2.2rem;
-  color: var(--dark-gray);
-  padding-bottom: 1rem;
-}
-
-.project-header {
-  margin: 0 auto;
-  text-align: center;
-  width: 80%;
-  padding-top: 3rem;
-}
-
-.project-header a {
-  font-size: 1.4rem;
-  color: var(--dark-gray);
-}
-
-.project-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  margin: 0 auto;
-  background-color: #fff;
-  border-radius: 10px;
-  min-height: 40vh;
-}
-
-.project-card img {
-  padding: 0.5rem;
-  border-radius: 10px;
-}
-
-.project-details {
-  padding: 1.5rem 2rem 4rem 2rem;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  margin-top: 2.5rem;
-}
-
-.project-description {
-  margin-top: 1rem;
-  font-size: 1.4rem;
-}
-
-.more-info,
-.more-info:link,
-.more-info:active,
-.more-info:visited {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  color: var(--primary-color);
-  font-size: 1.1rem;
-  border-bottom: 1px solid transparent;
-  text-transform: uppercase;
-  transition: 0.2s ease-in;
-}
-
-.more-info:hover,
-.more-info:focus {
-  color: #000;
-}
-
-.live,
-.live:link,
-.live:active,
-.live:visited {
-  position: absolute;
-  bottom: 1rem;
-  right: 30%;
-  color: var(--primary-color);
-  font-size: 1.1rem;
-
-  text-transform: uppercase;
-  transition: 0.2s ease-in;
-}
-
-.live:hover,
-.live:focus {
-  color: #000;
-}
-
-.icon {
-  vertical-align: middle;
-}
-
-/* @media screen and (max-width: 768px) {
-  .project-container {
-    grid-template-columns: 1fr;
+@media screen and (max-width: 768px) {
+  .main-nav {
+    background-color: #fff !important;
+    padding: 1rem 2.4rem !important;
   }
 
-  .project-header h4 {
-    font-size: 1.4rem;
+  .nav-name {
+    color: var(--dark-gray) !important;
   }
-
-  .project-container {
-    gap: 2rem;
-  }
-
-  .live,
-  .live:link,
-  .live:active,
-  .live:visited {
-    right: 40%;
-  }
-} */
-
-/* @media (max-width: 768px) {
-  .resume-h1 {
-    font-size: 2.5rem;
-  }
-
-  .contact-item {
-    font-size: 1.1rem;
-  }
-
-  .container-resume {
-    column-gap: 0.5rem;
-    background: #fff;
-    grid-template-columns: 1fr;
-  }
-
-  h2.resume-left-h2 {
-    font-size: 1.5rem;
-  }
-
-  section.skills-left,
-  section.skills-right,
-  section.education-left,
-  section.work-left,
-  section.summary-left,
-  section.projects-left {
-    display: none !important;
-  }
-
-  section.summary-right,
-  section.work-right,
-  section.education-right,
-  section.projects-right {
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .mobile-header a {
-    color: var(--primary-color);
-    text-shadow: 1px 2px 1px var(--dark-gray);
-    border-bottom: 2px solid var(--primary-color);
-  }
-
-  .container-resume {
-    margin: 0;
-  }
-
-  .item {
-    text-align: center;
-  }
-
-  .mobile-header {
-    font-size: 2.2rem;
-    color: var(--primary-color);
-    text-transform: uppercase;
-  }
-
-  .project-container {
-    width: 90%;
-  }
-
-  .project-header h1 {
-    font-size: 3rem;
-  }
-} */
+}
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
@@ -916,7 +548,7 @@ ion-icon.back-arrow {
     display: flex;
   }
   .overlay {
-    opacity: 0;
+    opacity: 1;
   }
 
   div#projects {
@@ -943,8 +575,13 @@ ion-icon.back-arrow {
     max-width: 800px;
   }
 
+  .overlay {
+    opacity: 0;
+  }
+
   div#projects {
     grid-template-columns: repeat(3, 1fr);
+    gap: 0;
   }
 }
 
