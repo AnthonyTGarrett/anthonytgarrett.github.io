@@ -1,4 +1,5 @@
 'use strict';
+reseting;
 
 const repositories = [
   'BigBrewNation',
@@ -31,6 +32,13 @@ document.addEventListener('DOMContentLoaded', event => {
     window.Location.href = event.target.href;
   });
 
+  window.addEventListener('resize', function (event) {
+    if (window.innerWidth > 768) {
+      mobileNav.classList.remove('open');
+      mainNav.classList.remove('extend');
+    }
+  });
+
   const repos = getUserRepos('AnthonyTGarrett');
   addInformation(repos);
 });
@@ -50,6 +58,7 @@ function changeCss() {
     headerElement.style.backgroundColor = 'transparent';
     headerElement.style.paddingTop = '3rem';
     headerElement.style.height = '55px';
+    mobileNav.classList.toggle('open');
     for (let i = 0; i < headerLinks.length; i++) {
       headerLinks[i].style.color = '#d3d3d3';
     }

@@ -145,7 +145,7 @@ nav {
 }
 
 .extend {
-  height: 35vh;
+  height: 35vh !important;
   transition: all 0.4s ease;
 }
 
@@ -162,6 +162,7 @@ nav {
 .mobile-nav.open {
   display: block;
   max-height: 1000px;
+  width: 100%;
   opacity: 1;
   background-color: #fff;
 
@@ -518,10 +519,14 @@ footer {
   .nav-name {
     color: var(--dark-gray) !important;
   }
+
+  .mobile-nav {
+    width: 100% !important;
+  }
 }
 
 /* // Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .container {
     max-width: 600px;
   }
