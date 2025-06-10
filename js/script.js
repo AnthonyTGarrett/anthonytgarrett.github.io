@@ -1,5 +1,4 @@
 'use strict';
-reseting;
 
 const repositories = [
   'BigBrewNation',
@@ -10,11 +9,16 @@ const repositories = [
   'popular_streaming',
 ];
 
+const mobileNav = document.querySelector('.mobile-nav');
+
+window.addEventListener('scroll', changeCss, false);
+
 document.addEventListener('DOMContentLoaded', event => {
   const menu = document.querySelector('.menu');
   const mainNav = document.querySelector('.main-nav');
   const navContain = document.querySelector('.nav-container');
-  const mobileNav = document.querySelector('.mobile-nav');
+
+  const mainHeader = document.querySelector('.main-header');
 
   const mobileLinks = document.querySelector('.mobile-links');
 
@@ -25,9 +29,10 @@ document.addEventListener('DOMContentLoaded', event => {
   });
 
   mobileLinks.addEventListener('click', event => {
-    mainNav.classList.toggle('extend');
-    mobileNav.classList.toggle('open');
-    navContain.classList.toggle('go-top');
+    mainNav.classList.remove('extend');
+    mobileNav.classList.remove('open');
+    navContain.classList.remove('go-top');
+    menu.checked = false;
 
     window.Location.href = event.target.href;
   });
@@ -36,6 +41,7 @@ document.addEventListener('DOMContentLoaded', event => {
     if (window.innerWidth > 768) {
       mobileNav.classList.remove('open');
       mainNav.classList.remove('extend');
+      menu.checked = false;
     }
   });
 
@@ -58,14 +64,12 @@ function changeCss() {
     headerElement.style.backgroundColor = 'transparent';
     headerElement.style.paddingTop = '3rem';
     headerElement.style.height = '55px';
-    mobileNav.classList.toggle('open');
+    mobileNav.classList.remove('open');
     for (let i = 0; i < headerLinks.length; i++) {
       headerLinks[i].style.color = '#d3d3d3';
     }
   }
 }
-
-window.addEventListener('scroll', changeCss, false);
 
 async function getUserRepos(ghUserName) {
   try {

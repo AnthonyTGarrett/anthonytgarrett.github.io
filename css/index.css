@@ -59,8 +59,8 @@ hr.breaker-white {
 
 /* Hamburger Menu styles */
 .menu {
-  --s: 30px; /* control the size */
-  --c: var(--primary-color); /* the color */
+  --s: 30px;
+  --c: var(--primary-color);
 
   height: var(--s);
   aspect-ratio: 1;
