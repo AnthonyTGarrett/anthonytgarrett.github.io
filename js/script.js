@@ -80,27 +80,31 @@ async function getUserRepos(ghUserName) {
 }
 
 function addInformation(repos) {
-  repos.then(data => {
-    const usefulInfo = data.filter(obj => {
-      return repositories.includes(obj.name);
+  repos
+    .then(data => {
+      const usefulInfo = data.filter(obj => {
+        return repositories.includes(obj.name);
+      });
+      const siteList = [
+        'githubBrew',
+        'githubCalculator',
+        'githubInventory',
+        'githubClock',
+        'githubStreaming',
+        'githubTodo',
+      ];
+
+      for (let i = 0; i < siteList.length; i++) {
+        document.getElementById(siteList[i]).href = usefulInfo[i].html_url;
+
+        const dateString = usefulInfo[i].pushed_at;
+        const date = new Date(dateString);
+        document.querySelector(
+          `.${siteList[i]}`
+        ).textContent = `Updated: ${date.toLocaleString()}`;
+      }
+    })
+    .catch(error => {
+      console.error(error);
     });
-    const siteList = [
-      'githubBrew',
-      'githubCalculator',
-      'githubInventory',
-      'githubClock',
-      'githubStreaming',
-      'githubTodo',
-    ];
-
-    for (let i = 0; i < siteList.length; i++) {
-      document.getElementById(siteList[i]).href = usefulInfo[i].html_url;
-
-      const dateString = usefulInfo[i].pushed_at;
-      const date = new Date(dateString);
-      document.querySelector(
-        `.${siteList[i]}`
-      ).textContent = `Updated: ${date.toLocaleString()}`;
-    }
-  });
 }
