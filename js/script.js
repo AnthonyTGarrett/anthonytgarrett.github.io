@@ -18,8 +18,6 @@ document.addEventListener('DOMContentLoaded', event => {
   const mainNav = document.querySelector('.main-nav');
   const navContain = document.querySelector('.nav-container');
 
-  const mainHeader = document.querySelector('.main-header');
-
   const mobileLinks = document.querySelector('.mobile-links');
 
   menu.addEventListener('click', e => {
